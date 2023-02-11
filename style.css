@@ -1,0 +1,83 @@
+/* '*' se refere a tudo no codigo (div, h1, p, main,). Ele é o amigo que fala com todo mundo mas nem todo mundo gosta dele (referencia)*/
+
+*{
+    /* reset */
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #2AA9DB;
+    /* o display é como as css olha para as tags (cormportamentos),
+    com o "flex" podemos remodelar ao nosso agrado com referencia.
+    Ex: fique no meio baseando no eixo Y (Horizontal) */
+    display: flex;
+
+        /* justify-content so vai funcionar se o display for flex */
+    justify-content: center;
+
+    /* aling-items é o comando para alinhar referente ao eixo X porem tudo o que existe é o que foi criado e nao tudo o que é visto na pág, dentro dela ah "espaços vazios" que são vizualizados mas é como se nao estivessem ali */
+    align-items: center;
+
+    /* Para "ajustar" estes "espacos vazios" usamos:
+    width: 100vw; para fazer com que o eixo Y se torne tudo o que vemos na pág preenchendo os "espacos vazios" 
+    height: 100vh; para fazer com que o eixo X se torne tudo o que vemos na pág preenchendo os "espacos vazios"
+    100px == 100 pixels
+    100vw == 100 view widht(visão de todo o eixo Y)
+    100vh == 100 view height(visão de todo o eixo X)*/
+    width: 100vw;
+    height: 100vh;
+}
+
+main{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+
+    /* Gap faz com que o pai peça para os filhos se distanciarem um do outro (Para o gap funcionar ele precisa do display flex)*/
+    gap: 15px;
+
+    font-family: 'Roboto Mono', monospace;
+}
+
+/*. serve para chamar class / # serve para chamar ID */
+
+div.Perfil>img{
+    background-color: #dc143c;
+    width: 200px;
+
+    padding: 10px;
+    margin: 10px;
+
+    border-radius: 40px;
+}
+
+div.Links{
+    margin: auto;
+    border-radius: 15px;
+    background-color: #dc143c ;
+    width: 315px;
+    height: 90px;
+
+}
+
+div.Links>ul,a{
+    border-radius: 15px;
+    list-style: none;
+    text-decoration: none;
+    color: #000000;
+}
+
+div.Links li{
+    margin: 8px auto;
+    background-color: #fff;
+    border-radius: 15px;
+    width: 300px;
+}
+
+/* hover faz com que mude para um novo estilo quando o mouse passa encima do local */ 
+div.Links li:hover{
+    background-color: #ffffffd0;
+    width: 305px;
+}
